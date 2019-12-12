@@ -15,6 +15,7 @@ $black-bg:                   rgba(30,30,30,.97) !default;
 
 $black-color:                #333333 !default;
 $black-hr:                   #444444 !default;
+$black-brand: #252524 !default;
 
 $light-gray:                 #E3E3E3 !default;
 $medium-gray:                #DDDDDD !default; 
@@ -98,7 +99,7 @@ $border-radius-large-bottom:   0 0 $border-radius-large $border-radius-large !de
 
 $btn-round-radius:             30px !default;
 
-$height-base:                  40px !default;
+$height-base:                  60px !default;
 
 $font-size-base:               14px !default;
 $font-size-small:              12px !default;
@@ -145,6 +146,8 @@ $transition-ease:           ease 0s;
 
 $navbar-padding-a:               10px 15px;
 $navbar-margin-a:                15px  3px;
+
+$footer-padding:               20px 15px;
 
 $padding-social-a:               10px  5px;
 
