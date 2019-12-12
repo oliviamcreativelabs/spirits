@@ -23,6 +23,8 @@
     <link href='httpss://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300' rel='stylesheet'
         type='text/css'>
     <link href="./assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/ff12af2cd8.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="blog-page">
@@ -90,8 +92,15 @@
             <div class="small-info">
                 <h1 style="text-transform: uppercase; color: #fae596">Tipplehouse</h1>
                 <h3 style="text-transform: uppercase; color: #fae4967c">Wine, Whiskey, Beer for the soul.</h3>
+                <br>
+                <center>
+                    <a href="#feature">
+                        <i class="fas fa-glass-whiskey fa-3x" style="color: #fae496ac;"></i>
+                    </a>
+                </center>
             </div>
         </div>
+
         <div class="social-line social-line-black">
             <div class="container">
                 <div class="row">
@@ -110,7 +119,7 @@
                             <i class="fa fa-google-plus-square"></i> Post &middot; 131
                         </a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="feature">
                         <a href="" class="btn btn-simple btn-social btn-neutral">
                             <i class="fa fa-pinterest"></i> Pin it &middot; 323
                         </a>
@@ -134,9 +143,11 @@
                                     <button type="button" class="btn btn-neutral btn-simple">
                                         <i class="fa fa-bookmark-o"></i> Bookmark
                                     </button>
-                                    <button type="button" class="btn btn-neutral btn-simple">
-                                        <i class="fa fa-align-left"></i> Read article
-                                    </button>
+                                        <button type="button" class="btn btn-neutral btn-simple">
+                                            <a href="#article_1">
+                                            <i class="fa fa-align-left"></i> Read article
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                             <div class="content">
@@ -218,12 +229,14 @@
             <div class="row tim-row">
                 <legend>
                 </legend>
-                <h2 class="text-center">MUST TRY WHISKEYS FOR 2019</h2>
+                <h2 class="text-center"  id="article_1">MUST TRY WHISKEYS FOR 2019</h2>
                 <div class="col-md-8 col-md-offset-2">
-                        <img class="col-md-4" src="./assets/img/piggyback.png" alt="Whistlepig" style="width: 100px;" /> 
+                    <img class="col-md-4" src="./assets/img/piggyback.png" alt="Whistlepig" style="width: 100px;" />
                     <div class="image" style=" font-size: 1.3em;">
                         <a class="card-link" href="https://drizly.com/">
-                            <img src="./assets/img/drizly.jpeg" alt="Drizly Button" style="width: 60px; padding-bottom: 100px" rel="tooltip" title="" data-placement="right" data-original-title="Order from Drizly"/> 
+                            <img src="./assets/img/drizly.jpeg" alt="Drizly Button"
+                                style="width: 60px; padding-bottom: 100px" rel="tooltip" title="" data-placement="right"
+                                data-original-title="Order from Drizly" />
                         </a>
                         <h3 style="text-transform: uppercase;">WhistlePig PiggyBack</h3>
                     </div>
@@ -231,13 +244,20 @@
                         With 2019 coming to a close what a better way to close out the year than tying one of the 10
                         must-try whiskeys of 2019.
 
-                        The first on our list is from Vermont craft whiskey producer <a href="https://whistlepigwhiskey.com/"><b>Whistlepig</b>  </a> and their late Master Distiller <a href="https://www.nytimes.com/2018/11/08/obituaries/dave-pickerell-dead.html">Dave Pickerell</a>.
+                        The first on our list is from Vermont craft whiskey producer <a
+                            href="https://whistlepigwhiskey.com/"><b>Whistlepig</b> </a> and their late Master Distiller
+                        <a href="https://www.nytimes.com/2018/11/08/obituaries/dave-pickerell-dead.html">Dave
+                            Pickerell</a>.
                     </p>
                     <p>
-                        <b>PiggyBack</b> is a 6-year-old, 100% red-hued barrel-aged rye version known as “Old Monongahela".   This is, In fact, the only super-premium whiskey combining at least 6 years of age with high proof and a 100 percent rye grain bill. 
+                        <b>PiggyBack</b> is a 6-year-old, 100% red-hued barrel-aged rye version known as “Old
+                        Monongahela". This is, In fact, the only super-premium whiskey combining at least 6 years of age
+                        with high proof and a 100 percent rye grain bill.
                     </p>
                     <p>
-                        This corn-free mash's color profile and tasting notes include an amber appearance, a fresh cinnamon, black peppercorn, tangy tangerine and grapefruit zest nose as well as a powerful and long finish.
+                        This corn-free mash's color profile and tasting notes include an amber appearance, a fresh
+                        cinnamon, black peppercorn, tangy tangerine and grapefruit zest nose as well as a powerful and
+                        long finish.
                     </p>
                     <p>
 
@@ -292,14 +312,34 @@
 
 </script>
 
-<!-- If you are using TypeKit.com uncomment this code otherwise you can delete it -->
-<!--
-    <script src="https://use.typekit.net/[your kit code here].js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    -->
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
 
-<!-- If you have retina @2x images on your server which can be sent to iPhone/iPad/MacRetina, please uncomment the next line, otherwise you can delete it -->
-<!-- <script src="assets/js/retina.min.js"></script> -->
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+
+</script>
 
 
 </html>
