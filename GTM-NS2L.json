@@ -1,0 +1,233 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2018-11-05 06:29:26",
+    "containerVersion": {
+    "containerVersionId": "3",
+    "name": "Termly GDPR GTM Solution",
+    "description": "Termly GDPR GTM Solution",
+    "container": {
+    "name": "GDPR GTM Solution",
+    "publicId": "GTM-NHPCVSJ",
+    "usageContext": [
+    "WEB"
+    ]
+    },
+    "tag": [
+    {
+    "accountId": "4385133472",
+    "containerId": "10253447",
+    "tagId": "2",
+    "name": "Termly Script Blocker",
+    "type": "html",
+    "parameter": [
+    {
+    "type": "TEMPLATE",
+    "key": "html",
+    "value": "<script>/*Paste your 3-rd party snippet code here.*/</script>"
+    },
+    {
+    "type": "BOOLEAN",
+    "key": "supportDocumentWrite",
+    "value": "false"
+    }
+    ],
+    "fingerprint": "1541399271556",
+    "firingTriggerId": [
+    "10"
+    ],
+    "parentFolderId": "5",
+    "tagFiringOption": "ONCE_PER_EVENT"
+    }
+    ],
+    "trigger": [
+    {
+    "accountId": "4385133472",
+    "containerId": "10253447",
+    "triggerId": "10",
+    "name": "User Preference Update",
+    "type": "CUSTOM_EVENT",
+    "customEventFilter": [
+    {
+    "type": "MATCH_REGEX",
+    "parameter": [
+    {
+    "type": "TEMPLATE",
+    "key": "arg0",
+    "value": "{{_event}}"
+    },
+    {
+    "type": "TEMPLATE",
+    "key": "arg1",
+    "value": "userPrefUpdate"
+    }
+    ]
+    }
+    ],
+    "filter": [
+    {
+    "type": "CONTAINS",
+    "parameter": [
+    {
+    "type": "TEMPLATE",
+    "key": "arg0",
+    "value": "{{cookiesAccepted}}"
+    },
+    {
+    "type": "TEMPLATE",
+    "key": "arg1",
+    "value": "performance"
+    }
+    ]
+    },
+    {
+    "type": "CONTAINS",
+    "parameter": [
+    {
+    "type": "TEMPLATE",
+    "key": "arg0",
+    "value": "{{cookiesAccepted}}"
+    },
+    {
+    "type": "TEMPLATE",
+    "key": "arg1",
+    "value": "analytics"
+    }
+    ]
+    },
+    {
+    "type": "CONTAINS",
+    "parameter": [
+    {
+    "type": "TEMPLATE",
+    "key": "arg0",
+    "value": "{{cookiesAccepted}}"
+    },
+    {
+    "type": "TEMPLATE",
+    "key": "arg1",
+    "value": "advertising"
+    }
+    ]
+    },
+    {
+    "type": "CONTAINS",
+    "parameter": [
+    {
+    "type": "TEMPLATE",
+    "key": "arg0",
+    "value": "{{cookiesAccepted}}"
+    },
+    {
+    "type": "TEMPLATE",
+    "key": "arg1",
+    "value": "social_networking"
+    }
+    ]
+    },
+    {
+    "type": "CONTAINS",
+    "parameter": [
+    {
+    "type": "TEMPLATE",
+    "key": "arg0",
+    "value": "{{cookiesAccepted}}"
+    },
+    {
+    "type": "TEMPLATE",
+    "key": "arg1",
+    "value": "unclassified"
+    }
+    ]
+    },
+    {
+    "type": "EQUALS",
+    "parameter": [
+    {
+    "type": "TEMPLATE",
+    "key": "arg0",
+    "value": "{{Event}}"
+    },
+    {
+    "type": "TEMPLATE",
+    "key": "arg1",
+    "value": "userPrefUpdate"
+    }
+    ]
+    }
+    ],
+    "fingerprint": "1541399304767",
+    "parentFolderId": "5"
+    }
+    ],
+    "variable": [
+    {
+    "accountId": "4385133472",
+    "containerId": "10253447",
+    "variableId": "1",
+    "name": "cookiesAccepted",
+    "type": "v",
+    "parameter": [
+    {
+    "type": "INTEGER",
+    "key": "dataLayerVersion",
+    "value": "2"
+    },
+    {
+    "type": "BOOLEAN",
+    "key": "setDefaultValue",
+    "value": "false"
+    },
+    {
+    "type": "TEMPLATE",
+    "key": "name",
+    "value": "cookiesAccepted"
+    }
+    ],
+    "fingerprint": "1541399326789",
+    "parentFolderId": "5",
+    "formatValue": {}
+    }
+    ],
+    "folder": [
+    {
+    "accountId": "4385133472",
+    "containerId": "10253447",
+    "folderId": "5",
+    "name": "Termly GDPR Solution",
+    "fingerprint": "1540464582344"
+    }
+    ],
+    "builtInVariable": [
+    {
+    "accountId": "4385133472",
+    "containerId": "10253447",
+    "type": "PAGE_URL",
+    "name": "Page URL"
+    },
+    {
+    "accountId": "4385133472",
+    "containerId": "10253447",
+    "type": "PAGE_HOSTNAME",
+    "name": "Page Hostname"
+    },
+    {
+    "accountId": "4385133472",
+    "containerId": "10253447",
+    "type": "PAGE_PATH",
+    "name": "Page Path"
+    },
+    {
+    "accountId": "4385133472",
+    "containerId": "10253447",
+    "type": "REFERRER",
+    "name": "Referrer"
+    },
+    {
+    "accountId": "4385133472",
+    "containerId": "10253447",
+    "type": "EVENT",
+    "name": "Event"
+    }
+    ]
+    }
+    }
